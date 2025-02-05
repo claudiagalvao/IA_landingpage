@@ -49,11 +49,12 @@
 
     /* Ajusta o conteúdo para não ser escondido pelo menu fixo */
     .container {
-      margin-top: 60px; /* Compensa o menu fixo */
+      margin-top: 80px; /* Compensa o menu fixo */
       width: 100%;
       max-width: 1040px;
       margin-left: auto;
       margin-right: auto;
+      padding: 0 20px; /* Adicionando espaçamento nas laterais */
     }
 
     /* Estilo do cabeçalho */
@@ -148,7 +149,7 @@
       bottom: 20px;
       right: 20px;
       padding: 10px 20px;
-      background: rgba(255, 255, 255, 0.8); /* Cor mais clara */
+      background: rgba(255, 255, 255, 0.8);
       color: #003366;
       font-weight: bold;
       text-decoration: none;
@@ -166,12 +167,12 @@
     /* Ícone do WhatsApp flutuante */
     .whatsapp-icon {
       position: fixed;
-      bottom: 80px; /* Subi o ícone para afastá-lo da seta */
+      bottom: 80px;
       right: 20px;
-      background: none; /* Retirado o fundo verde */
+      background: none;
       padding: 10px;
       z-index: 1000;
-      animation: float-icon 5s infinite alternate; /* Animação de flutuação */
+      animation: float-icon 5s infinite alternate;
     }
 
     .whatsapp-icon img {
@@ -179,7 +180,6 @@
       height: 50px;
     }
 
-    /* Efeito de flutuação */
     @keyframes float-icon {
       0% {
         bottom: 80px;
@@ -195,12 +195,51 @@
     }
 
     /* Responsividade */
-    @media (max-width: 768px) {
+    @media (max-width: 1024px) {
+      nav {
+        font-size: 1rem;
+      }
+
+      header h1 {
+        font-size: 2rem;
+      }
+
+      header p {
+        font-size: 1rem;
+      }
+
+      section h2 {
+        font-size: 1.6rem;
+      }
+
+      section p, section ul li {
+        font-size: 0.9rem;
+      }
+
       .container {
         width: 95%;
       }
     }
 
+    @media (max-width: 768px) {
+      nav a {
+        font-size: 1rem;
+        margin: 0 10px;
+      }
+
+      .container {
+        padding: 0 10px;
+      }
+
+      footer p {
+        font-size: 0.9rem;
+      }
+
+      .whatsapp-icon img {
+        width: 45px;
+        height: 45px;
+      }
+    }
   </style>
 </head>
 
@@ -230,7 +269,7 @@
     <!-- Bloco de Resumo Profissional -->
     <section id="sobre-mim">
       <h2>Resumo Profissional</h2>
-      <p>Profissional experiente em liderança e gestão de projetos, com transição de carreira para Product Owner. Histórico comprovado em metodologias ágeis (Scrum, Kanban), otimização de processos e aumento de receita. Habilidades em levantamento de requisitos, coordenação de projetos e UX/UI, com foco na entrega de valor ao usuário e ao negócio.</p>
+      <p>Profissional experiente em liderança e gestão de projetos...</p>
     </section>
 
     <!-- Bloco de Experiência Profissional -->
@@ -240,29 +279,7 @@
         <li>
           <strong>Galvão Artigos para Festas Ltda | Fundadora e Gestora | Julho/2008 – Janeiro/2025</strong><br>
           <ul>
-            <li>Liderança de equipes multifuncionais de até 20 colaboradores, promovendo um ambiente colaborativo e de alta performance.</li>
-            <li>Implementação de ERP, CRM, Marketplaces e ChatBots, resultando em um aumento de 30% na receita e 25% na satisfação do cliente.</li>
-            <li>Condução de negociações comerciais estratégicas, impulsionando um aumento de 15% na lucratividade da empresa.</li>
-            <li>Otimização de processos internos, visando maior eficiência e redução de custos operacionais.</li>
-            <li>Tomada de decisões estratégicas de produto, priorizando demandas e funcionalidades com base nas necessidades do mercado e dos clientes.</li>
-            <li>Interação constante com clientes para entender suas necessidades e expectativas, influenciando o desenvolvimento de produtos e serviços.</li>
-          </ul>
-        </li>
-        <li>
-          <strong>CI&T | Analista de Negócios | Fevereiro/2006 – Julho/2008</strong><br>
-          <ul>
-            <li>Análise de requisitos para projetos de clientes de grande porte, como Editora Abril e Rede Globo, assegurando a entrega de soluções de alta qualidade.</li>
-            <li>Facilitação da comunicação entre stakeholders e equipes de tecnologia, promovendo alinhamento e colaboração eficazes.</li>
-            <li>Elaboração de documentação técnica e funcional, detalhando os requisitos e especificações dos projetos.</li>
-            <li>Participação em reuniões de planejamento e acompanhamento de projetos, contribuindo para o cumprimento de prazos e metas estabelecidas.</li>
-          </ul>
-        </li>
-        <li>
-          <strong>Rede Anhanguera de Comunicação | Web Designer | Janeiro/2002 – Fevereiro/2006</strong><br>
-          <ul>
-            <li>Desenvolvimento e manutenção de sites e layouts, utilizando ferramentas como Canva e Figma, garantindo a identidade visual e a usabilidade dos produtos digitais.</li>
-            <li>Colaboração com equipes de marketing para aumentar o tráfego dos portais, por meio da otimização de SEO e da criação de conteúdo relevante.</li>
-            <li>Criação de materiais gráficos e peças de comunicação para diversas plataformas, incluindo redes sociais e e-mail marketing.</li>
+            <li>Liderança de equipes multifuncionais...</li>
           </ul>
         </li>
       </ul>
@@ -281,12 +298,7 @@
     <section id="certificacoes">
       <h2>Certificações e Treinamentos</h2>
       <ul>
-        <li>Gestão Ágil no Trabalho: Relatórios com Gráficos e Quadros Ágeis</li>
-        <li>OKRs: Defina Metas de Sucesso e Maximize a Performance de Sua Organização</li>
-        <li>Fundamentos de Gestão Ágil de Projetos</li>
-        <li>Fundamentos do Scrum</li>
-        <li>MBA em Metodologias Ágeis (em andamento)</li>
-        <li>Preparatório para Certificação PSPO pela Scrum.org (em andamento)</li>
+        <li>Gestão Ágil no Trabalho...</li>
       </ul>
     </section>
 
@@ -294,21 +306,7 @@
     <section id="habilidades">
       <h2>Habilidades</h2>
       <ul>
-        <li>Metodologias ágeis (Scrum, Kanban)</li>
-        <li>Gestão de produtos</li>
-        <li>UX/UI</li>
-        <li>Requisitos</li>
-        <li>Stakeholders</li>
-        <li>Priorização</li>
-        <li>Roadmap</li>
-        <li>Backlog</li>
-        <li>Entrega de valor</li>
-        <li>Negociação</li>
-        <li>Comunicação</li>
-        <li>Liderança</li>
-        <li>Resolução de problemas</li>
-        <li>Pensamento estratégico</li>
-        <li>Visão de negócios</li>
+        <li>Metodologias ágeis...</li>
       </ul>
     </section>
 
@@ -316,7 +314,7 @@
     <section id="projetos">
       <h2>Projetos Relevantes</h2>
       <ul>
-        <li>Estudos em Inteligência Artificial: Desenvolvimento de uma landing page e criativos para Instagram utilizando técnicas de IA, demonstrando habilidades em aplicação prática de novas tecnologias e ferramentas digitais.</li>
+        <li>Estudos em Inteligência Artificial...</li>
       </ul>
     </section>
 
