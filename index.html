@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Claudia Galvão Borin - Product Owner</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
     /* Reset básico */
     * {
@@ -16,40 +17,13 @@
     body {
       font-family: 'Arial', sans-serif;
       line-height: 1.4;
-      background: linear-gradient(135deg, #f4f4f4, #e0e0e0);
+      background-color: #f4f4f4; /* Cor de fundo cinza claro */
       color: #333;
     }
 
-    /* Menu fixo no topo */
-    nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      background: #003366;
-      color: white;
-      padding: 10px 20px;
-      display: flex;
-      justify-content: center;
-      z-index: 1000;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-size: 1.2rem;
-      margin: 0 15px;
-      transition: color 0.3s ease;
-    }
-
-    nav a:hover {
-      color: #ffcc00;
-    }
-
-    /* Ajusta o conteúdo para não ser escondido pelo menu fixo */
+    /* Ajustes para o conteúdo */
     .container {
-      margin-top: 80px; /* Aumentado para evitar sobreposição com o menu fixo */
+      margin-top: 40px; /* Aumentado para evitar sobreposição com o menu fixo */
       width: 100%;
       max-width: 1040px;
       margin-left: auto;
@@ -60,7 +34,7 @@
     header {
       background: linear-gradient(135deg, #002244, #003366);
       color: #fff;
-      padding: 40px 20px; /* Ajustado para melhor exibição em dispositivos móveis */
+      padding: 30px 20px; /* Distância reduzida em 40% */
       text-align: center;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       border-radius: 10px;
@@ -75,6 +49,53 @@
     header p {
       font-size: 1.2rem;
       color: #fff;
+      margin-bottom: 10px; /* Adicionado espaçamento */
+    }
+
+    header .contact-info {
+      margin-top: 10px;
+      font-size: 1rem;
+    }
+
+    /* Ícones de WhatsApp, LinkedIn e E-mail */
+    .social-icons {
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .social-icons a {
+      font-size: 2rem;
+      color: #fff;
+      transition: transform 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      transform: translateY(-5px);
+    }
+
+    /* Efeito de flutuação */
+    .social-icons a.whatsapp {
+      animation: float 1.5s ease-in-out infinite;
+    }
+
+    .social-icons a.linkedin {
+      animation: float 1.5s ease-in-out infinite;
+    }
+
+    .social-icons a.email {
+      animation: float 1.5s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-10px);
+      }
     }
 
     /* Estilos das seções */
@@ -139,68 +160,13 @@
 
     footer p {
       margin: 0;
-    }
-
-    .back-to-top {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      padding: 10px 20px;
-      background: rgba(255, 255, 255, 0.8);
-      color: #003366;
-      font-weight: bold;
-      text-decoration: none;
-      border-radius: 50%;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      transition: background 0.3s ease, transform 0.3s ease;
-      z-index: 1000;
-    }
-
-    .back-to-top:hover {
-      background: rgba(255, 255, 255, 0.9);
-      transform: translateY(-3px) scale(1.1);
-    }
-
-    /* Ícone do WhatsApp flutuante */
-    .whatsapp-icon {
-      position: fixed;
-      bottom: 80px;
-      right: 20px;
-      background: none;
-      padding: 10px;
-      z-index: 1000;
-      animation: float-icon 5s infinite alternate;
-    }
-
-    .whatsapp-icon img {
-      width: 50px;
-      height: 50px;
-    }
-
-    /* Efeito de flutuação */
-    @keyframes float-icon {
-      0% {
-        bottom: 80px;
-      }
-
-      50% {
-        bottom: 120px;
-      }
-
-      100% {
-        bottom: 80px;
-      }
+      color: white; /* Mudando a cor do texto para branco */
     }
 
     /* Responsividade */
     @media (max-width: 768px) {
       .container {
         width: 95%;
-      }
-
-      nav a {
-        font-size: 1rem;
-        margin: 0 10px;
       }
 
       header h1 {
@@ -216,177 +182,200 @@
       }
 
       .container {
-        margin-top: 100px; /* Aumenta o espaçamento superior para dispositivos móveis */
+        margin-top: 30px; /* Aumenta o espaçamento superior para dispositivos móveis */
       }
     }
 
-    /* Ajustes específicos para dispositivos muito pequenos */
-    @media (max-width: 480px) {
-      header h1 {
-        font-size: 1.8rem;
-      }
-
-      section h2 {
-        font-size: 1.6rem;
-      }
-
-      p {
-        font-size: 0.9rem;
-      }
-
-      ul {
-        padding-left: 15px;
-      }
-
-      ul li {
-        font-size: 0.9rem;
-      }
-
-      footer p {
-        font-size: 0.9rem;
-      }
+    /* Seta de rolagem à direita */
+    .scroll-up {
+      position: fixed;
+      top: 50%;
+      right: 10px; /* Mover para o lado direito */
+      transform: translateY(-50%);
+      background-color: #003366;
+      color: white;
+      padding: 10px;
+      border-radius: 50%;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      font-size: 24px;
+      z-index: 999;
     }
 
+    .scroll-up:hover {
+      background-color: #ffcc00;
+    }
+
+    .link-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .link-list a {
+      color: #003366;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .link-list a:hover {
+      color: #ffcc00;
+    }
   </style>
 </head>
 
 <body>
 
-  <!-- Menu fixo -->
-  <nav>
-    <a href="#sobre-mim">Sobre Mim</a>
-    <a href="#experiencias">Experiências</a>
-    <a href="#formacao">Formação</a>
-    <a href="#certificacoes">Certificações</a>
-    <a href="#habilidades">Habilidades</a>
-    <a href="#projetos">Projetos</a>
-    <a href="#contato">Contato</a>
-  </nav>
-
   <header>
     <div class="container">
       <h1>Claudia Galvão Borin</h1>
       <p>Product Owner | Gestão de Produtos e Metodologias Ágeis (Scrum, Kanban) | UX/UI e Experiência do Cliente</p>
-      <p>Valinhos, SP | (19) 99173-3777 | cgborin@gmail.com</p>
-      <p><a href="https://www.linkedin.com/in/claudiagalvao-productowner" target="_blank">LinkedIn</a></p>
+      <div class="contact-info">
+        <p>Valinhos, SP | (19) 99173-3777</p>
+      </div>
+      <div class="social-icons">
+        <a href="https://wa.me/5519991733777" class="whatsapp" target="_blank">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="https://linkedin.com/in/claudiagalvao-productowne" class="linkedin" target="_blank">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="mailto:cgborin@gmail.com" class="email" target="_blank">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
     </div>
   </header>
 
   <div class="container">
-    <!-- Bloco de Resumo Profissional -->
-    <section id="sobre-mim">
-      <h2>Resumo Profissional</h2>
-      <p style="line-height: 1.6;">Profissional experiente em liderança e gestão de projetos, com transição de carreira para Product Owner. Histórico comprovado em metodologias ágeis (Scrum, Kanban), otimização de processos e aumento de receita. Habilidades em levantamento de requisitos, coordenação de projetos e UX/UI, com foco na entrega de valor ao usuário e ao negócio.</p>
+
+    <!-- Objetivo -->
+    <section>
+      <h2>Objetivo</h2>
+      <p>Atuar como Product Owner em uma empresa de tecnologia inovadora, aplicando minha experiência em gestão de produtos, metodologias ágeis, gestão de backlog, e UX/UI para entregar soluções de alto valor aos clientes e ao negócio. Busco alavancar minha expertise para entregar produtos de impacto com foco na melhoria contínua e na maximização de resultados.</p>
     </section>
 
-    <!-- Bloco de Experiência Profissional -->
-    <section id="experiencias">
+    <!-- Resumo Profissional -->
+    <section>
+      <h2>Resumo Profissional</h2>
+      <p>Profissional com sólida experiência em liderança e gestão de projetos, atualmente em transição para o cargo de Product Owner. Conhecedora de metodologias ágeis (Scrum, Kanban) com um histórico comprovado de otimização de processos, gestão de backlog, desenvolvimento de roadmap de produto, e aumento de receita. Habilidade no levantamento de requisitos de produtos, coordenação de equipes multifuncionais e UX/UI, com foco na entrega de valor real para os usuários e para o negócio.</p>
+    </section>
+
+    <!-- Experiência Profissional -->
+    <section>
       <h2>Experiência Profissional</h2>
-      <ul style="list-style-type: none;">
-        <li>
-          <strong>Galvão Artigos para Festas Ltda | Fundadora e Gestora | Julho/2008 – Janeiro/2025</strong><br>
-          <ul>
-            <li>Liderança de equipes multifuncionais de até 20 colaboradores, promovendo um ambiente colaborativo e de alta performance.</li>
-            <li>Implementação de ERP, CRM, Marketplaces e ChatBots, resultando em um aumento de 30% na receita e 25% na satisfação do cliente.</li>
-            <li>Condução de negociações comerciais estratégicas, impulsionando um aumento de 15% na lucratividade da empresa.</li>
-            <li>Otimização de processos internos, visando maior eficiência e redução de custos operacionais.</li>
-            <li>Tomada de decisões estratégicas de produto, priorizando demandas e funcionalidades com base nas necessidades do mercado e dos clientes.</li>
-            <li>Interação constante com clientes para entender suas necessidades e expectativas, influenciando o desenvolvimento de produtos e serviços.</li>
-          </ul>
-        </li>
-        <li>
-          <strong>CI&T | Analista de Negócios | Fevereiro/2006 – Julho/2008</strong><br>
-          <ul>
-            <li>Análise de requisitos para projetos de clientes de grande porte, como Editora Abril e Rede Globo, assegurando a entrega de soluções de alta qualidade.</li>
-            <li>Facilitação da comunicação entre stakeholders e equipes de tecnologia, promovendo alinhamento e colaboração eficazes.</li>
-            <li>Elaboração de documentação técnica e funcional, detalhando os requisitos e especificações dos projetos.</li>
-            <li>Participação em reuniões de planejamento e acompanhamento de projetos, contribuindo para o cumprimento de prazos e metas estabelecidas.</li>
-          </ul>
-        </li>
-        <li>
-          <strong>Rede Anhanguera de Comunicação | Web Designer | Janeiro/2002 – Fevereiro/2006</strong><br>
-          <ul>
-            <li>Desenvolvimento e manutenção de sites e layouts, utilizando ferramentas como Canva e Figma, garantindo a identidade visual e a usabilidade dos produtos digitais.</li>
-            <li>Colaboração com equipes de marketing para aumentar o tráfego dos portais, por meio da otimização de SEO e da criação de conteúdo relevante.</li>
-            <li>Criação de materiais gráficos e peças de comunicação para diversas plataformas, incluindo redes sociais e e-mail marketing.</li>
-          </ul>
-        </li>
+
+      <h3>Galvão Artigos para Festas Ltda</h3>
+      <p><strong>Fundadora e Gestora | Julho/2008 – Jan/2025</strong></p>
+      <ul>
+        <li>Liderança de equipes de até 10 colaboradores, promovendo um ambiente de trabalho colaborativo e focado na entrega de valor.</li>
+        <li>Implementação de metodologias ágeis para a gestão de processos, com destaque para a implementação de ERP, CRM, Marketplaces e ChatBots, resultando em 30% de aumento na receita e 25% de aumento na satisfação do cliente.</li>
+        <li>Gestão de backlog e definição de prioridades para a entrega de funcionalidades e soluções que atendam às necessidades do negócio e dos usuários.</li>
+        <li>Condução de negociações comerciais, resultando em 15% de aumento na lucratividade.</li>
+      </ul>
+
+      <h3>CI&T</h3>
+      <p><strong>Analista de Negócios | Fev/2006 – Julho/2008</strong></p>
+      <ul>
+        <li>Análise de requisitos e facilitação da comunicação entre stakeholders e equipes de desenvolvimento para projetos de grandes clientes como Editora Abril e Rede Globo.</li>
+        <li>Gestão de roadmap de produtos, garantindo o alinhamento de todas as entregas com os objetivos estratégicos da empresa e as expectativas dos clientes.</li>
+        <li>Desenvolvimento de estratégias para otimização de processos, alinhando as necessidades do cliente com as soluções tecnológicas.</li>
+      </ul>
+
+      <h3>Rede Anhanguera de Comunicação</h3>
+      <p><strong>Web Designer | Jan/2002 – Fev/2006</strong></p>
+      <ul>
+        <li>Desenvolvimento e manutenção de sites e layouts, focando na experiência do usuário (UX) e na usabilidade dos portais.</li>
+        <li>Colaboração com equipes de marketing para aumentar o tráfego e o engajamento nas plataformas, com foco em conversão e aumento de audiência.</li>
       </ul>
     </section>
 
-    <!-- Bloco de Formação Acadêmica -->
-    <section id="formacao">
+    <!-- Formação Acadêmica -->
+    <section>
       <h2>Formação Acadêmica</h2>
       <ul>
-        <li>Rede Anhanguera | Publicidade e Propaganda | 2005</li>
-        <li>Unicamp | Engenharia Sanitária e Ambiental | 1998</li>
+        <li>Publicidade e Propaganda | Rede Anhanguera | 2005</li>
+        <li>Engenharia Sanitária e Ambiental | Unicamp | 1998</li>
       </ul>
     </section>
 
-    <!-- Bloco de Certificações -->
-    <section id="certificacoes">
+    <!-- Idiomas -->
+    <section>
+      <h2>Idiomas</h2>
+      <ul>
+        <li>Inglês: Intermediário (leitura técnica)</li>
+      </ul>
+    </section>
+
+    <!-- Certificações e Treinamentos -->
+    <section>
       <h2>Certificações e Treinamentos</h2>
-      <ul style="line-height: 1.3;">
+      <ul>
         <li>Gestão Ágil no Trabalho: Relatórios com Gráficos e Quadros Ágeis</li>
         <li>OKRs: Defina Metas de Sucesso e Maximize a Performance de Sua Organização</li>
         <li>Fundamentos de Gestão Ágil de Projetos</li>
         <li>Fundamentos do Scrum</li>
-        <li>MBA em Metodologias Ágeis (em andamento)</li>
-        <li>Preparatório para Certificação PSPO pela Scrum.org (em andamento)</li>
+        <li>Em andamento: MBA em Metodologias Ágeis - Certificado de Pós-graduação emitido pela UMJ e reconhecido pelo MEC.</li>
+        <li>Estudo em andamento: Certificação PSPO (Professional Scrum Product Owner) pela Scrum.org.</li>
       </ul>
     </section>
 
-    <!-- Bloco de Habilidades -->
-    <section id="habilidades">
-      <h2>Habilidades</h2>
-      <ul style="line-height: 1.3;">
-        <li>Metodologias ágeis (Scrum, Kanban)</li>
-        <li>Gestão de produtos</li>
-        <li>UX/UI</li>
-        <li>Requisitos</li>
-        <li>Stakeholders</li>
-        <li>Priorização</li>
-        <li>Roadmap</li>
-        <li>Backlog</li>
-        <li>Entrega de valor</li>
-        <li>Negociação</li>
-        <li>Comunicação</li>
-        <li>Liderança</li>
-        <li>Resolução de problemas</li>
-        <li>Pensamento estratégico</li>
-        <li>Visão de negócios</li>
-      </ul>
+    <!-- Tecnologias e Ferramentas -->
+    <section>
+      <h2>Tecnologias e Ferramentas</h2>
+      <div style="display: flex; gap: 30px; flex-wrap: wrap;">
+        <ul>
+          <li>Trello</li>
+          <li>Jira</li>
+          <li>ERP</li>
+          <li>CRM</li>
+        </ul>
+        <ul>
+          <li>Marketplaces</li>
+          <li>ChatBots</li>
+          <li>Canva</li>
+          <li>Figma</li>
+        </ul>
+        <ul>
+          <li>Miro</li>
+        </ul>
+      </div>
     </section>
 
-    <!-- Bloco de Projetos Relevantes -->
-    <section id="projetos">
+    <!-- Projetos Relevantes -->
+    <section>
       <h2>Projetos Relevantes</h2>
-      <ul>
-        <li>Estudos em Inteligência Artificial: Desenvolvimento de uma landing page e criativos para Instagram utilizando técnicas de IA, demonstrando habilidades em aplicação prática de novas tecnologias e ferramentas digitais.</li>
-      </ul>
+      <p><strong>Estudos em Inteligência Artificial:</strong> Desenvolvi uma landing page e criativos para Instagram utilizando técnicas de IA, demonstrando habilidades em aplicação prática de novas tecnologias e ferramentas digitais, além de otimização para conversão.</p>
+      <div class="link-list">
+        <a href="https://claudiagalvao.github.io/IA_landingpage/" target="_blank">Landing Page de IA</a>
+        <a href="https://github.com/claudiagalvao/CriativosInstagram/blob/main/crazycarnivalfeed.jpg" target="_blank">Criativo Instagram (Feed)</a>
+        <a href="https://github.com/claudiagalvao/CriativosInstagram/blob/main/crazycarnivalstories.jpg" target="_blank">Criativo Instagram (Stories)</a>
+        <a href="https://claudiagalvao.github.io/IA_E-commercePet/" target="_blank">E-commerce Pet com IA</a>
+      </div>
+      <p><strong>Desenvolvimento de soluções ágeis para automação de processos:</strong> Implantei e gerenciei soluções baseadas em Scrum para otimização de fluxos de trabalho e agilidade operacional.</p>
     </section>
 
-    <!-- Bloco de Contato -->
-    <section id="contato">
-      <h2>Contato</h2>
-      <p>Entre em contato com Claudia Galvão Borin:</p>
-      <p><strong>Email:</strong> cgborin@gmail.com</p>
-      <p><strong>Telefone:</strong> (19) 99173-3777</p>
+    <!-- Competências -->
+    <section>
+      <h2>Competências</h2>
+      <ul>
+        <li><strong>Liderança:</strong> Gestão de equipes multifuncionais, criando ambientes colaborativos e focados na entrega de valor.</li>
+        <li><strong>Gestão de Backlog:</strong> Prioridade de funcionalidades e entregas com base no valor para o usuário e alinhamento com objetivos estratégicos.</li>
+        <li><strong>Comunicação Eficaz:</strong> Capacidade de transmitir informações de forma clara e objetiva, facilitando a comunicação entre stakeholders e equipes técnicas.</li>
+        <li><strong>Resolução de Problemas:</strong> Habilidade em identificar e solucionar problemas de forma eficiente, garantindo a continuidade e a qualidade dos produtos.</li>
+        <li><strong>Pensamento Estratégico:</strong> Capacidade de desenvolver e implementar estratégias eficazes para o crescimento de produtos e o alcance de metas organizacionais.</li>
+      </ul>
     </section>
   </div>
 
-  <!-- Rodapé -->
   <footer>
-    <p>© 2025 Claudia Galvão Borin. Todos os direitos reservados.</p>
+    <p>&copy; 2025 Claudia Galvão Borin | Todos os direitos reservados</p>
   </footer>
 
-  <!-- Botão para voltar ao topo -->
-  <a href="#" class="back-to-top">↑</a>
-
-  <!-- Ícone de WhatsApp flutuante -->
-  <a href="https://wa.me/5519991733777" target="_blank" class="whatsapp-icon">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-  </a>
+  <!-- Seta para rolar até o topo -->
+  <div class="scroll-up" onclick="window.scrollTo(0, 0)">
+    <i class="fas fa-arrow-up"></i>
+  </div>
 
 </body>
 
