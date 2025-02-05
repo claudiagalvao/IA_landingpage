@@ -15,7 +15,7 @@
 
     body {
       font-family: 'Arial', sans-serif;
-      line-height: 1.6;
+      line-height: 1.4;
       background: linear-gradient(135deg, #f4f4f4, #e0e0e0);
       color: #333;
     }
@@ -49,19 +49,18 @@
 
     /* Ajusta o conteúdo para não ser escondido pelo menu fixo */
     .container {
-      margin-top: 80px; /* Compensa o menu fixo */
+      margin-top: 80px; /* Aumentado para evitar sobreposição com o menu fixo */
       width: 100%;
       max-width: 1040px;
       margin-left: auto;
       margin-right: auto;
-      padding: 0 20px; /* Adicionando espaçamento nas laterais */
     }
 
     /* Estilo do cabeçalho */
     header {
       background: linear-gradient(135deg, #002244, #003366);
       color: #fff;
-      padding: 40px 0;
+      padding: 40px 20px; /* Ajustado para melhor exibição em dispositivos móveis */
       text-align: center;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       border-radius: 10px;
@@ -101,26 +100,24 @@
       padding-bottom: 10px;
     }
 
-    p,
-    ul {
+    p, ul {
       font-size: 1rem;
-      line-height: 1.8;
+      line-height: 1.4;
       color: #555;
     }
 
     ul {
-      list-style-type: none;
+      list-style-type: disc;
+      padding-left: 20px;
     }
 
     ul li {
-      background: #f9f9f9;
-      margin: 10px 0;
-      padding: 15px;
-      border-radius: 8px;
+      margin: 8px 0;
+      padding: 8px 0;
     }
 
     a {
-      color: #003366;
+      color: #ffcc00; /* Cor do link do LinkedIn alterada para amarelo */
       text-decoration: none;
       font-weight: bold;
       transition: color 0.3s ease;
@@ -180,6 +177,7 @@
       height: 50px;
     }
 
+    /* Efeito de flutuação */
     @keyframes float-icon {
       0% {
         bottom: 80px;
@@ -195,51 +193,60 @@
     }
 
     /* Responsividade */
-    @media (max-width: 1024px) {
-      nav {
+    @media (max-width: 768px) {
+      .container {
+        width: 95%;
+      }
+
+      nav a {
         font-size: 1rem;
+        margin: 0 10px;
       }
 
       header h1 {
         font-size: 2rem;
       }
 
-      header p {
-        font-size: 1rem;
+      section {
+        padding: 15px;
+      }
+
+      ul li {
+        margin: 5px 0;
+      }
+
+      .container {
+        margin-top: 100px; /* Aumenta o espaçamento superior para dispositivos móveis */
+      }
+    }
+
+    /* Ajustes específicos para dispositivos muito pequenos */
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 1.8rem;
       }
 
       section h2 {
         font-size: 1.6rem;
       }
 
-      section p, section ul li {
+      p {
         font-size: 0.9rem;
       }
 
-      .container {
-        width: 95%;
-      }
-    }
-
-    @media (max-width: 768px) {
-      nav a {
-        font-size: 1rem;
-        margin: 0 10px;
+      ul {
+        padding-left: 15px;
       }
 
-      .container {
-        padding: 0 10px;
+      ul li {
+        font-size: 0.9rem;
       }
 
       footer p {
         font-size: 0.9rem;
       }
-
-      .whatsapp-icon img {
-        width: 45px;
-        height: 45px;
-      }
     }
+
   </style>
 </head>
 
@@ -269,17 +276,39 @@
     <!-- Bloco de Resumo Profissional -->
     <section id="sobre-mim">
       <h2>Resumo Profissional</h2>
-      <p>Profissional experiente em liderança e gestão de projetos...</p>
+      <p style="line-height: 1.6;">Profissional experiente em liderança e gestão de projetos, com transição de carreira para Product Owner. Histórico comprovado em metodologias ágeis (Scrum, Kanban), otimização de processos e aumento de receita. Habilidades em levantamento de requisitos, coordenação de projetos e UX/UI, com foco na entrega de valor ao usuário e ao negócio.</p>
     </section>
 
     <!-- Bloco de Experiência Profissional -->
     <section id="experiencias">
       <h2>Experiência Profissional</h2>
-      <ul>
+      <ul style="list-style-type: none;">
         <li>
           <strong>Galvão Artigos para Festas Ltda | Fundadora e Gestora | Julho/2008 – Janeiro/2025</strong><br>
           <ul>
-            <li>Liderança de equipes multifuncionais...</li>
+            <li>Liderança de equipes multifuncionais de até 20 colaboradores, promovendo um ambiente colaborativo e de alta performance.</li>
+            <li>Implementação de ERP, CRM, Marketplaces e ChatBots, resultando em um aumento de 30% na receita e 25% na satisfação do cliente.</li>
+            <li>Condução de negociações comerciais estratégicas, impulsionando um aumento de 15% na lucratividade da empresa.</li>
+            <li>Otimização de processos internos, visando maior eficiência e redução de custos operacionais.</li>
+            <li>Tomada de decisões estratégicas de produto, priorizando demandas e funcionalidades com base nas necessidades do mercado e dos clientes.</li>
+            <li>Interação constante com clientes para entender suas necessidades e expectativas, influenciando o desenvolvimento de produtos e serviços.</li>
+          </ul>
+        </li>
+        <li>
+          <strong>CI&T | Analista de Negócios | Fevereiro/2006 – Julho/2008</strong><br>
+          <ul>
+            <li>Análise de requisitos para projetos de clientes de grande porte, como Editora Abril e Rede Globo, assegurando a entrega de soluções de alta qualidade.</li>
+            <li>Facilitação da comunicação entre stakeholders e equipes de tecnologia, promovendo alinhamento e colaboração eficazes.</li>
+            <li>Elaboração de documentação técnica e funcional, detalhando os requisitos e especificações dos projetos.</li>
+            <li>Participação em reuniões de planejamento e acompanhamento de projetos, contribuindo para o cumprimento de prazos e metas estabelecidas.</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Rede Anhanguera de Comunicação | Web Designer | Janeiro/2002 – Fevereiro/2006</strong><br>
+          <ul>
+            <li>Desenvolvimento e manutenção de sites e layouts, utilizando ferramentas como Canva e Figma, garantindo a identidade visual e a usabilidade dos produtos digitais.</li>
+            <li>Colaboração com equipes de marketing para aumentar o tráfego dos portais, por meio da otimização de SEO e da criação de conteúdo relevante.</li>
+            <li>Criação de materiais gráficos e peças de comunicação para diversas plataformas, incluindo redes sociais e e-mail marketing.</li>
           </ul>
         </li>
       </ul>
@@ -297,16 +326,35 @@
     <!-- Bloco de Certificações -->
     <section id="certificacoes">
       <h2>Certificações e Treinamentos</h2>
-      <ul>
-        <li>Gestão Ágil no Trabalho...</li>
+      <ul style="line-height: 1.3;">
+        <li>Gestão Ágil no Trabalho: Relatórios com Gráficos e Quadros Ágeis</li>
+        <li>OKRs: Defina Metas de Sucesso e Maximize a Performance de Sua Organização</li>
+        <li>Fundamentos de Gestão Ágil de Projetos</li>
+        <li>Fundamentos do Scrum</li>
+        <li>MBA em Metodologias Ágeis (em andamento)</li>
+        <li>Preparatório para Certificação PSPO pela Scrum.org (em andamento)</li>
       </ul>
     </section>
 
     <!-- Bloco de Habilidades -->
     <section id="habilidades">
       <h2>Habilidades</h2>
-      <ul>
-        <li>Metodologias ágeis...</li>
+      <ul style="line-height: 1.3;">
+        <li>Metodologias ágeis (Scrum, Kanban)</li>
+        <li>Gestão de produtos</li>
+        <li>UX/UI</li>
+        <li>Requisitos</li>
+        <li>Stakeholders</li>
+        <li>Priorização</li>
+        <li>Roadmap</li>
+        <li>Backlog</li>
+        <li>Entrega de valor</li>
+        <li>Negociação</li>
+        <li>Comunicação</li>
+        <li>Liderança</li>
+        <li>Resolução de problemas</li>
+        <li>Pensamento estratégico</li>
+        <li>Visão de negócios</li>
       </ul>
     </section>
 
@@ -314,7 +362,7 @@
     <section id="projetos">
       <h2>Projetos Relevantes</h2>
       <ul>
-        <li>Estudos em Inteligência Artificial...</li>
+        <li>Estudos em Inteligência Artificial: Desenvolvimento de uma landing page e criativos para Instagram utilizando técnicas de IA, demonstrando habilidades em aplicação prática de novas tecnologias e ferramentas digitais.</li>
       </ul>
     </section>
 
