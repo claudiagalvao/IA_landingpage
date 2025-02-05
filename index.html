@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Claudia Galvão Borin - Product Owner</title>
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      background: linear-gradient(135deg, #f4f4f4, #e0e0e0);
+      color: #333;
+    }
+
+    /* Menu fixo no topo */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: #003366;
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: center;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.2rem;
+      margin: 0 15px;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ffcc00;
+    }
+
+    /* Ajusta o conteúdo para não ser escondido pelo menu fixo */
+    .container {
+      margin-top: 60px; /* Compensa o menu fixo */
+      width: 100%;
+      max-width: 1040px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Estilo do cabeçalho */
+    header {
+      background: linear-gradient(135deg, #002244, #003366);
+      color: #fff;
+      padding: 40px 0;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #fff;
+    }
+
+    /* Estilos das seções */
+    section {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      margin-bottom: 20px;
+    }
+
+    section:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    h2 {
+      color: #003366;
+      margin-bottom: 20px;
+      font-size: 1.8rem;
+      border-bottom: 2px solid #003366;
+      padding-bottom: 10px;
+    }
+
+    p,
+    ul {
+      font-size: 1rem;
+      line-height: 1.8;
+      color: #555;
+    }
+
+    ul {
+      list-style-type: none;
+    }
+
+    ul li {
+      background: #f9f9f9;
+      margin: 10px 0;
+      padding: 15px;
+      border-radius: 8px;
+    }
+
+    a {
+      color: #003366;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #004080;
+    }
+
+    footer {
+      background: linear-gradient(135deg, #002244, #003366);
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+      box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    .back-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      padding: 10px 20px;
+      background: rgba(255, 255, 255, 0.8); /* Cor mais clara */
+      color: #003366;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 50%;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: background 0.3s ease, transform 0.3s ease;
+      z-index: 1000;
+    }
+
+    .back-to-top:hover {
+      background: rgba(255, 255, 255, 0.9);
+      transform: translateY(-3px) scale(1.1);
+    }
+
+    /* Ícone do WhatsApp flutuante */
+    .whatsapp-icon {
+      position: fixed;
+      bottom: 80px; /* Subi o ícone para afastá-lo da seta */
+      right: 20px;
+      background: none; /* Retirado o fundo verde */
+      padding: 10px;
+      z-index: 1000;
+      animation: float-icon 5s infinite alternate; /* Animação de flutuação */
+    }
+
+    .whatsapp-icon img {
+      width: 50px;
+      height: 50px;
+    }
+
+    /* Efeito de flutuação */
+    @keyframes float-icon {
+      0% {
+        bottom: 80px;
+      }
+
+      50% {
+        bottom: 120px;
+      }
+
+      100% {
+        bottom: 80px;
+      }
+    }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+      .container {
+        width: 95%;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- Menu fixo -->
+  <nav>
+    <a href="#sobre-mim">Sobre Mim</a>
+    <a href="#experiencias">Experiências</a>
+    <a href="#formacao">Formação</a>
+    <a href="#certificacoes">Certificações</a>
+    <a href="#habilidades">Habilidades</a>
+    <a href="#projetos">Projetos</a>
+    <a href="#contato">Contato</a>
+  </nav>
+
+  <header>
+    <div class="container">
+      <h1>Claudia Galvão Borin</h1>
+      <p>Product Owner | Gestão de Produtos e Metodologias Ágeis (Scrum, Kanban) | UX/UI e Experiência do Cliente</p>
+      <p>Valinhos, SP | (19) 99173-3777 | cgborin@gmail.com</p>
+      <p><a href="https://www.linkedin.com/in/claudiagalvao-productowner" target="_blank">LinkedIn</a></p>
+    </div>
+  </header>
+
+  <div class="container">
+    <!-- Bloco de Resumo Profissional -->
+    <section id="sobre-mim">
+      <h2>Resumo Profissional</h2>
+      <p>Profissional experiente em liderança e gestão de projetos, com transição de carreira para Product Owner. Histórico comprovado em metodologias ágeis (Scrum, Kanban), otimização de processos e aumento de receita. Habilidades em levantamento de requisitos, coordenação de projetos e UX/UI, com foco na entrega de valor ao usuário e ao negócio.</p>
+    </section>
+
+    <!-- Bloco de Experiência Profissional -->
+    <section id="experiencias">
+      <h2>Experiência Profissional</h2>
+      <ul>
+        <li>
+          <strong>Galvão Artigos para Festas Ltda | Fundadora e Gestora | Julho/2008 – Janeiro/2025</strong><br>
+          <ul>
+            <li>Liderança de equipes multifuncionais de até 20 colaboradores, promovendo um ambiente colaborativo e de alta performance.</li>
+            <li>Implementação de ERP, CRM, Marketplaces e ChatBots, resultando em um aumento de 30% na receita e 25% na satisfação do cliente.</li>
+            <li>Condução de negociações comerciais estratégicas, impulsionando um aumento de 15% na lucratividade da empresa.</li>
+            <li>Otimização de processos internos, visando maior eficiência e redução de custos operacionais.</li>
+            <li>Tomada de decisões estratégicas de produto, priorizando demandas e funcionalidades com base nas necessidades do mercado e dos clientes.</li>
+            <li>Interação constante com clientes para entender suas necessidades e expectativas, influenciando o desenvolvimento de produtos e serviços.</li>
+          </ul>
+        </li>
+        <li>
+          <strong>CI&T | Analista de Negócios | Fevereiro/2006 – Julho/2008</strong><br>
+          <ul>
+            <li>Análise de requisitos para projetos de clientes de grande porte, como Editora Abril e Rede Globo, assegurando a entrega de soluções de alta qualidade.</li>
+            <li>Facilitação da comunicação entre stakeholders e equipes de tecnologia, promovendo alinhamento e colaboração eficazes.</li>
+            <li>Elaboração de documentação técnica e funcional, detalhando os requisitos e especificações dos projetos.</li>
+            <li>Participação em reuniões de planejamento e acompanhamento de projetos, contribuindo para o cumprimento de prazos e metas estabelecidas.</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Rede Anhanguera de Comunicação | Web Designer | Janeiro/2002 – Fevereiro/2006</strong><br>
+          <ul>
+            <li>Desenvolvimento e manutenção de sites e layouts, utilizando ferramentas como Canva e Figma, garantindo a identidade visual e a usabilidade dos produtos digitais.</li>
+            <li>Colaboração com equipes de marketing para aumentar o tráfego dos portais, por meio da otimização de SEO e da criação de conteúdo relevante.</li>
+            <li>Criação de materiais gráficos e peças de comunicação para diversas plataformas, incluindo redes sociais e e-mail marketing.</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Bloco de Formação Acadêmica -->
+    <section id="formacao">
+      <h2>Formação Acadêmica</h2>
+      <ul>
+        <li>Rede Anhanguera | Publicidade e Propaganda | 2005</li>
+        <li>Unicamp | Engenharia Sanitária e Ambiental | 1998</li>
+      </ul>
+    </section>
+
+    <!-- Bloco de Certificações -->
+    <section id="certificacoes">
+      <h2>Certificações e Treinamentos</h2>
+      <ul>
+        <li>Gestão Ágil no Trabalho: Relatórios com Gráficos e Quadros Ágeis</li>
+        <li>OKRs: Defina Metas de Sucesso e Maximize a Performance de Sua Organização</li>
+        <li>Fundamentos de Gestão Ágil de Projetos</li>
+        <li>Fundamentos do Scrum</li>
+        <li>MBA em Metodologias Ágeis (em andamento)</li>
+        <li>Preparatório para Certificação PSPO pela Scrum.org (em andamento)</li>
+      </ul>
+    </section>
+
+    <!-- Bloco de Habilidades -->
+    <section id="habilidades">
+      <h2>Habilidades</h2>
+      <ul>
+        <li>Metodologias ágeis (Scrum, Kanban)</li>
+        <li>Gestão de produtos</li>
+        <li>UX/UI</li>
+        <li>Requisitos</li>
+        <li>Stakeholders</li>
+        <li>Priorização</li>
+        <li>Roadmap</li>
+        <li>Backlog</li>
+        <li>Entrega de valor</li>
+        <li>Negociação</li>
+        <li>Comunicação</li>
+        <li>Liderança</li>
+        <li>Resolução de problemas</li>
+        <li>Pensamento estratégico</li>
+        <li>Visão de negócios</li>
+      </ul>
+    </section>
+
+    <!-- Bloco de Projetos Relevantes -->
+    <section id="projetos">
+      <h2>Projetos Relevantes</h2>
+      <ul>
+        <li>Estudos em Inteligência Artificial: Desenvolvimento de uma landing page e criativos para Instagram utilizando técnicas de IA, demonstrando habilidades em aplicação prática de novas tecnologias e ferramentas digitais.</li>
+      </ul>
+    </section>
+
+    <!-- Bloco de Contato -->
+    <section id="contato">
+      <h2>Contato</h2>
+      <p>Entre em contato com Claudia Galvão Borin:</p>
+      <p><strong>Email:</strong> cgborin@gmail.com</p>
+      <p><strong>Telefone:</strong> (19) 99173-3777</p>
+    </section>
+  </div>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>© 2025 Claudia Galvão Borin. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- Botão para voltar ao topo -->
+  <a href="#" class="back-to-top">↑</a>
+
+  <!-- Ícone de WhatsApp flutuante -->
+  <a href="https://wa.me/5519991733777" target="_blank" class="whatsapp-icon">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+  </a>
+
+</body>
+
+</html>
